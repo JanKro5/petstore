@@ -38,17 +38,20 @@ public class petstore implements EntryPoint {
 	HorizontalPanel middle = new HorizontalPanel();
 	middle.add(table);
 	middle.add(right);
-
+	middle.addStyleName("middle");
 	Label header = new Label("Petstore");
+	header.addStyleName("header");
 	FlowPanel footer = new FlowPanel();
 	footer.add(new Label("Kontakt: "));
 	footer.add(new Anchor("office@petstore.pcz.pl",
 			      "mailto: office@petstore.pcz.pl"));
 
+	footer.addStyleName("footer");
 	VerticalPanel vp = new VerticalPanel();
 	vp.add(header);
 	vp.add(middle);
 	vp.add(footer);
+	vp.addStyleName("page");
 	RootPanel.get().add(vp);
     }
 }
